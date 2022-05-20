@@ -1,12 +1,12 @@
 let allThings = [];
 let tempThing;
-let maxThings = 10;
+let maxThings = 1000;
 let minWallDist = 0;
 let wallMass = 999;
 let wallU1 = 1;
 let negAccVal = -1;
-let G = 300;
-let velRetardingRate = 0.99;
+let G = 1000;
+let velRetardingRate = 1;
 
 let AttractionX;
 let AttractionY;
@@ -72,7 +72,7 @@ class Thing
   {
     this.x = x;
     this.y = y;
-    this.accelerationRange = 0;
+    this.accelerationRange = 2;
     this.acceleration = createVector(random(-1*this.accelerationRange, this.accelerationRange), random(-1*this.accelerationRange, this.accelerationRange));
     this.velocity = createVector(0, 0);
     this.maxVelocity = 10;
